@@ -30,5 +30,5 @@ you to compare two words in order to find out if they are anagrams!
 
 #### Web Browser
 
-http://localhost:8080/anagramfinder?firstword=scare&secondword=cares2
+http://localhost:8080/anagramfinder?firstword=scare&secondword=cares
 
