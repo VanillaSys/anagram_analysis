@@ -23,10 +23,6 @@ you to compare two words in order to find out if they are anagrams!
 
 ### Consuming service
 
-#### Command Line
- ```sh
- curl -X POST http://localhost:8080/anagramfinder --data "firstword=scare&secondword=cares"
-```
 
 #### Web Browser
 
