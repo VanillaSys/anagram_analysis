@@ -8,21 +8,21 @@ public class AnagramFinderImp implements AnagramFinder {
 	public boolean areAnagrams(String s1, String s2) {
 		
 		//clean Strings from whitespace
-		String firstword = s1.toLowerCase().replaceAll("//s", "");
-		String secondword = s2.toLowerCase().replaceAll("//s", "");
+		String firstword = trim_whitespaces_and_sort(s1);
+		String secondword = trim_whitespaces_and_sort(s2);
 		
-		//obtain a char array to later sort them in a new string
-		char[] firstwordarray = firstword.toCharArray();
-		char[] secondwordarray = secondword.toCharArray();
 		
-		Arrays.sort(firstwordarray);
-		Arrays.sort(secondwordarray);
+		return firstword.equals(secondword);	
 		
-		String firstwordsorted = new String(firstwordarray);
-		String secondwordsorted = new String(secondwordarray);
+	}
+	
+	private String trim_whitespaces_and_sort(String word){
 		
-		return firstwordsorted.equals(secondwordsorted);	
+		String original_trimed = word.toLowerCase().replaceAll("//s", "");
+		char[] word_array = original_trimed.toCharArray();
+		Arrays.sort(word_array);
 		
+		return new String(word_array);
 	}
 	
 }
