@@ -17,8 +17,8 @@ public class AnagramFinderImp implements AnagramFinder {
 	}
 	
 	private String prepare_string(String word){
-		
-		String original = word.toLowerCase();
+
+		String original = word.toLowerCase().replaceAll("\\s","");
 		char[] word_array = original.toCharArray();
 		Arrays.sort(word_array);
 		
